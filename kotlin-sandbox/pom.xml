@@ -35,6 +35,10 @@
                         </goals>
 
                         <configuration>
+                            <args>
+                                <arg>-Xcoroutines=enable</arg>
+                            </args>
+
                             <sourceDirs>
                                 <sourceDir>${basedir}/src/main/kotlin</sourceDir>
                                 <sourceDir>${basedir}/src/main/java</sourceDir>
@@ -50,6 +54,10 @@
                         </goals>
 
                         <configuration>
+                            <args>
+                                <arg>-Xcoroutines=enable</arg>
+                            </args>
+
                             <sourceDirs>
                                 <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
                                 <sourceDir>${project.basedir}/src/test/java</sourceDir>
@@ -115,6 +123,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-core</artifactId>
+            <version>0.12</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>21.0</version>
@@ -162,5 +176,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>dl</id>
+            <name>bintray</name>
+            <url>http://dl.bintray.com/kotlin/kotlin-eap-1.1</url>
+        </repository>
+    </repositories>
 
 </project>
